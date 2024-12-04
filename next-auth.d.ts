@@ -1,9 +1,11 @@
-/* declare module "next-auth" {
-    interface Session {
+import { DefaultSession } from "next-auth";
+
+declare module "next-auth" {
+    interface Session extends DefaultSession{
         id: string;
     }
 
     interface JWT {
         id: string;
     }
-} */
+}
